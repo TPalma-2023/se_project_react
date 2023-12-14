@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className="header">
+        <div className="header__logo">
+          <div>
+            <img src="/images/Logo.svg" alt="logo"></img>
+          </div>
+          <div>date</div>
+        </div>
+        <div className="header__avatar-logo">
+          <div>
+            <button type="text">+Add Clothes</button>
+          </div>
+          <div>Terrence Tegegne</div>
+          <div>
+            <img src="/images/Ellipse 18.svg" alt="avatar"></img>
+          </div>
+        </div>
       </header>
+      <main></main>
+      <footer></footer>
+      <div class="ModalWithForm"></div>
+      <div class="ItemModal"></div>
     </div>
   );
 }
