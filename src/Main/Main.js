@@ -2,7 +2,7 @@ import { defaultClothingItems } from "../util/constants";
 import WeatherCard from "../WeatherCard/WeatherCard";
 import ItemCard from "../ItemCard/ItemCard";
 
-function Main({ weatherTemp }) {
+function Main({ weatherTemp, onSelectCard }) {
   return (
     <main className="main">
       <WeatherCard day={true} type="cloudy" weatherTemp={weatherTemp} />
@@ -10,7 +10,7 @@ function Main({ weatherTemp }) {
         <div>"Today is {weatherTemp} / You may want to wear:"</div>
         <div className="card_item">
           {defaultClothingItems.map((item) => {
-            return <ItemCard item={item} />;
+            return <ItemCard item={item} onSelectCard={onSelectCard} />;
           })}
         </div>
       </section>
