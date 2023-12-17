@@ -1,23 +1,25 @@
 const weatherOptions = [
-  { url: "/images/day/sunny.svg", day: true, type: "sunny" },
-  { url: "/images/day/cloudy.svg", day: true, type: "cloudy" },
-  { url: "/images/day/rain.svg", day: true, type: "rain" },
-  { url: "/images/day/fog.svg", day: true, type: "fog" },
-  { url: "/images/day/snow.svg", day: true, type: "snow" },
-  { url: "/images/day/storm.svg", day: true, type: "storm" },
+  { url: require("../images/day/sunny.svg").default, day: true, type: "sunny" },
+  {
+    url: require("../images/day/cloudy.svg").default,
+    day: true,
+    type: "cloudy",
+  },
+  { url: require("../images/day/rain.svg").default, day: true, type: "rain" },
+  { url: require("../images/day/fog.svg").default, day: true, type: "fog" },
+  { url: require("../images/day/snow.svg").default, day: true, type: "snow" },
+  { url: require("../images/day/storm.svg").default, day: true, type: "storm" },
 ];
 
-const WeatherCard = ({ day, type }) => {
+const WeatherCard = ({ day, type, weatherTemp = "" }) => {
   const imageSrc = weatherOptions.filter((i) => {
     return i.day === day && i.type === type;
   });
-  // console.log(imageSrc);
-  // console.log(imageSrc[0].url);
   const imageSrcUrl = imageSrc[0].url || "";
-  console.log(imageSrcUrl);
+
   return (
     <section className="weather" id="weather">
-      <div className="weather_info">65f</div>
+      <div className="weather_info">{weatherTemp}</div>
 
       <img src={imageSrcUrl} alt="sunny" className="weather_image"></img>
     </section>
