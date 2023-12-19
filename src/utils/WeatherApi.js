@@ -1,4 +1,3 @@
-// https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}
 import { APIKey, latitude, longitude } from "./constants";
 
 export const getForecastWeather = () => {
@@ -20,5 +19,3 @@ export const parseWeatherData = (data) => {
   const temperature = main && main.temp;
   return Math.ceil(temperature);
 };
-
-// api.openweathermap.org/data/2.5/weather?q=London&mode=html&{82998fd41dea3b7833c39f5b9d310b64}
