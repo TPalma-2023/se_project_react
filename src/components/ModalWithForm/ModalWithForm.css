@@ -1,0 +1,163 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content {
+  background-color: white;
+  max-width: 496px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 34px 36px;
+  position: relative;
+}
+
+.modal_title {
+  margin: 0 0 22px;
+}
+
+.modal_button-close {
+  background-image: url("../../images/close_button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 20px;
+  min-width: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  left: calc(100% - 40px);
+  bottom: calc(100% - 40px);
+  color: white;
+}
+
+.modal_button-close:hover {
+  opacity: 0.6;
+}
+
+.modal_input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 0 0 20px;
+  cursor: pointer;
+  min-height: 24px;
+}
+
+.modal_label {
+  font-family: "Cabinet Grotesk-Regular", Arial, sans-serif;
+  min-height: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.modal_label:last-child {
+  margin-bottom: 20px;
+}
+
+.modal_radio_options {
+  margin: 10px 0 20px;
+}
+
+.modal_radio-option {
+  min-height: 20px;
+  font-family: "Cabinet Grotesk-Regular", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.modal_radio-options:last-child {
+  margin-bottom: 30px;
+}
+
+.modal_radio-options:disabled {
+  background-color: rgba(0, 0, 0, rgba(0, 0, 0, 0.5));
+}
+
+.radio_button {
+  accent-color: black;
+}
+
+.radio_button:checked + label {
+  opacity: 1;
+}
+
+.radio_label {
+  font-family: "Cabinet Grotesk-Regular", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.modal_button_submit {
+  width: 124px;
+  height: 36px;
+  color: white;
+  background-color: black;
+  font-family: "Cabinet Grotesk-Regular", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal_button_submit-disabled {
+  opacity: 0.3;
+}
+
+.modal_button_submit:hover {
+  opacity: 0.6;
+}
+
+.modal_preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.modal_image {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal_item-name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 34px;
+}
+
+.modal_sub-title {
+  min-height: 112px;
+  height: 100%;
+  padding: 10px 30px 20px;
+  background-color: white;
+}
+
+.modal_weather-type {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}

@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  padding: 32px 20px 0px;
+  margin-bottom: 30px;
+}
+
+.header__logo {
+  display: flex;
+
+  align-items: center;
+}
+.header__avatar-logo {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header_text {
+  font-family: "Cabinet Grotesk-Regular", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.header_button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
