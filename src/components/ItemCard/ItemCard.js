@@ -1,14 +1,13 @@
 const ItemCard = ({ item, onSelectCard }) => {
   return (
-    <div>
-      <div className="card_item">
-        <img
-          src={item.link}
-          className="card_image"
-          onClick={() => onSelectCard(item)}
-        ></img>
-        <div className="card_name">{item.name}</div>
-      </div>
+    <div className="card_item">
+      <img
+        src={item.link}
+        alt={item.name}
+        className="card_image"
+        onClick={() => onSelectCard(item)}
+      ></img>
+      <p className="card_name">{item.name}</p>
     </div>
   );
 };

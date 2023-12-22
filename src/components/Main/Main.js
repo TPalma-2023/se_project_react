@@ -27,7 +27,10 @@ function Main({ onSelectCard, temp }) {
         </div>
         <div className="card_items">
           {filteredCards.map((item) => {
-            return <ItemCard item={item} onSelectCard={onSelectCard} />;
+            const key = item._id;
+            return (
+              <ItemCard item={item} key={key} onSelectCard={onSelectCard} />
+            );
           })}
         </div>
       </section>

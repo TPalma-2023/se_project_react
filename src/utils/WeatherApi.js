@@ -14,8 +14,13 @@ export const getForecastWeather = () => {
 };
 
 export const parseWeatherData = (data) => {
-  console.log(data);
   const main = data.main;
   const temperature = main && main.temp;
   return Math.ceil(temperature);
+};
+
+export const parseCityData = (data) => {
+  const city = data.name;
+
+  return city;
 };

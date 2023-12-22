@@ -6,7 +6,12 @@ import "../Footer/Footer.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useEffect, useState } from "react";
 import ItemModal from "../ItemModal/ItemModal";
-import { getForecastWeather, parseWeatherData } from "../../utils/WeatherApi";
+import {
+  getForecastWeather,
+  parseCityData,
+  parseWeatherData,
+} from "../../utils/WeatherApi";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 function App() {
   const weatherTemp = "75F";
@@ -19,6 +24,7 @@ function App() {
   };
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
+  const [city, setCity] = useState("");
 
   const handleSelectedCard = (card) => {
     setActiveModal("preview");
@@ -26,15 +32,19 @@ function App() {
   };
 
   useEffect(() => {
-    getForecastWeather().then((data) => {
-      const temperature = parseWeatherData(data);
-      setTemp(temperature);
-    });
+    getForecastWeather()
+      .then((data) => {
+        const temperature = parseWeatherData(data);
+        const city = parseCityData(data);
+        setTemp(temperature);
+        setCity(city);
+      })
+      .catch(console.error);
   }, []);
 
   return (
     <div>
-      <Header onCreateModal={handleCreateModal} />
+      <Header onCreateModal={handleCreateModal} city={city} />
       <Main
         weatherTemp={weatherTemp}
         onSelectCard={handleSelectedCard}
@@ -52,6 +62,7 @@ function App() {
               maxLength="30"
               className="modal_input"
               placeholder="Name"
+              id="name-input"
             ></input>
           </label>
           <label>
@@ -63,6 +74,7 @@ function App() {
               maxLength="30"
               className="modal_input"
               placeholder="Image URL"
+              id="image-input"
             ></input>
           </label>
           <p className="modal_label">Select the weather type:</p>
@@ -73,8 +85,11 @@ function App() {
                 id="hot"
                 value="hot"
                 className="radio_button"
+                name="weatherType"
               ></input>
-              <label className="radio_label">Hot</label>
+              <label htmlFor="hot" className="radio_label">
+                Hot
+              </label>
             </div>
             <div className="modal_radio-option">
               <input
@@ -82,8 +97,11 @@ function App() {
                 id="warm"
                 value="warm"
                 className="radio_button"
+                name="weatherType"
               ></input>
-              <label className="radio_label">Warm</label>
+              <label htmlFor="warm" className="radio_label">
+                Warm
+              </label>
             </div>
             <div className="modal_radio-option">
               <input
@@ -91,8 +109,11 @@ function App() {
                 id="cold"
                 value="cold"
                 className="radio_button"
+                name="weatherType"
               ></input>
-              <label className="radio_label">Cold</label>
+              <label htmlFor="cold" className="radio_label">
+                Cold
+              </label>
             </div>
           </div>
         </ModalWithForm>
