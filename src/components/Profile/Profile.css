@@ -1,0 +1,20 @@
+.profile {
+  display: flex;
+  padding: 0 20px;
+  gap: 60px;
+}
+
+.profile__info {
+  display: flex;
+  gap: 20px;
+  min-width: 230px;
+}
+
+.profile__username {
+  font-family: Cabinet Grotesk;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}

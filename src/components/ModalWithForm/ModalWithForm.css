@@ -145,7 +145,9 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  margin: 0 0 34px;
+  margin: 12px 0 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal_sub-title {
@@ -159,4 +161,17 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.modal__button-delete {
+  font-family: Cabinet Grotesk;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  color: #ff4d00;
 }
