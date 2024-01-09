@@ -32,6 +32,10 @@
   margin: 20px 0;
 }
 
+.clothes__section-button:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .clothes__section-cards {
   display: flex;
   flex-wrap: wrap;
