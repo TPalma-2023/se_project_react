@@ -3,7 +3,7 @@ import { baseUrl } from "./constants";
 export const checkServerResponse = (res) => {
   if (res.ok) {
     return res.json();
-  } else Promise.reject(res.status);
+  } else Promise.reject(`Error: ${res.status}`);
 };
 
 export function getInitalItems() {
