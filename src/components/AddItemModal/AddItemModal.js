@@ -40,6 +40,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
           placeholder="Name"
           id="name-input"
           value={name}
+          required
           onChange={handleNameChange}
         ></input>
       </label>
@@ -52,6 +53,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
           className="modal_input"
           placeholder="Image URL"
           id="image-input"
+          required
           value={imageUrl}
           onChange={handleUrlChange}
         ></input>
