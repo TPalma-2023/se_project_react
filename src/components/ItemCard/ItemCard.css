@@ -1,0 +1,23 @@
+.card_likebutton {
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: rgba(250, 250, 250);
+}
+
+.card_likebutton-active {
+  background-image: url("../../images/LikeButtonActive.svg");
+}
+
+.card_likebutton-inactive {
+  background-image: url("../../images/LikeButtonInactive.svg");
+}
+
+.card_button_container {
+  position: absolute;
+  top: 10px;
+  left: calc(100% - 30px);
+}

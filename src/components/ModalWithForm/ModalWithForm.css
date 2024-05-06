@@ -106,7 +106,7 @@
 }
 
 .modal_button_submit {
-  width: 124px;
+  width: 128px;
   height: 36px;
   color: white;
   background-color: black;
@@ -132,6 +132,8 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 16px;
+  max-width: 498px;
+  max-height: 610px;
 }
 
 .modal_image {
@@ -163,7 +165,7 @@
   line-height: 24px;
 }
 
-.modal__button-delete {
+.modal_button-delete {
   font-family: Cabinet Grotesk;
   font-size: 20px;
   font-weight: 700;
@@ -174,4 +176,18 @@
   background-color: white;
   cursor: pointer;
   color: #ff4d00;
+}
+
+.modal_link {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal_link:hover {
+  opacity: 0.6;
+}
+
+.modal_button {
+  cursor: pointer;
 }

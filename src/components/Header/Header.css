@@ -7,16 +7,18 @@
   margin-bottom: 30px;
 }
 
-.header__logo {
+.header_logo {
   display: flex;
   gap: 20px;
-
   align-items: center;
 }
-.header__avatar-logo {
+.header_avatar-logo {
   display: flex;
   gap: 20px;
   align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 .header_text {
@@ -24,6 +26,9 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .header_button {

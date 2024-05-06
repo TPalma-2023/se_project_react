@@ -99,6 +99,9 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
             Cold
           </label>
         </div>
+        <button className="modal_button_submit" type="submit">
+          Add Item
+        </button>
       </div>
     </ModalWithForm>
   );

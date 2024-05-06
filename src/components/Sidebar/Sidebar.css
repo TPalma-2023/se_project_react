@@ -1,0 +1,40 @@
+.sidebar {
+  margin-right: 70px;
+}
+
+.sidebar_profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.sidebar_profile-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 8px;
+}
+
+.sidebar_profile-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar_profile-button:hover {
+  opacity: 0.5;
+}
+
+.sidebar_profile-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+  margin-bottom: 24px;
+}
+
+.sidebar_profile-username {
+  font-family: "CabinetGrotesk-Bold", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+}

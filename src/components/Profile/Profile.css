@@ -4,13 +4,13 @@
   gap: 60px;
 }
 
-.profile__info {
+.profile_info {
   display: flex;
   gap: 20px;
   min-width: 230px;
 }
 
-.profile__username {
+.profile_username {
   font-family: Cabinet Grotesk;
   font-size: 20px;
   font-weight: 700;

@@ -8,17 +8,17 @@
   text-align: left;
 }
 
-.clothes__section {
+.clothes_section {
   display: flex;
   align-items: baseline;
 }
 
-.clothes__section-text {
+.clothes_section-text {
   margin: 20px 0;
   padding-right: 20px;
 }
 
-.clothes__section-button {
+.clothes_section-button {
   border: none;
   appearance: none;
   background-color: #fff;
@@ -32,11 +32,11 @@
   margin: 20px 0;
 }
 
-.clothes__section-button:hover {
+.clothes_section-button:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.clothes__section-cards {
+.clothes_section-cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
