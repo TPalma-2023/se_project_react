@@ -26,6 +26,7 @@ import { login, register, checkToken, updateUser } from "../../utils/auth";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import LoginModal from "../LoginModal/LoginModal";
 import EditProfileModal from "../EditProfileModal/EditProfileModal";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 function App() {
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
@@ -229,7 +230,7 @@ function App() {
               loggedIn={isLoggedIn}
             />
           </Route>
-          <Route path="/profile">
+          <ProtectedRoute path="/profile" loggedIn={isLoggedIn}>
             <Profile
               onSelectCard={handleSelectedCard}
               clothingItems={clothingItems}
@@ -239,7 +240,7 @@ function App() {
               editProfile={handleEditProfileModal}
               onLike={handleCardLike}
             />
-          </Route>
+          </ProtectedRoute>
         </Switch>
         <Footer />
         {activeModal === "create" && (
