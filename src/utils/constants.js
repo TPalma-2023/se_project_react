@@ -7,7 +7,7 @@ export const longitude = -77.0;
 
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://whattowear.twilightparadox.com/"
+    ? "https://whattowear.twilightparadox.com"
     : "http://localhost:3001";
 
 export const weatherOptions = [
