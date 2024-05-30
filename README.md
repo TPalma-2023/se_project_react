@@ -1,7 +1,8 @@
 # WTWR (What to Wear?)
 
-## Website Domain Name
+## Website Domain Names
 whattowear.twilightparadox.com
+api.whattowear.twilightparadox.com
 
 ## About the project
 
